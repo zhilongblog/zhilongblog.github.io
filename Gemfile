@@ -1,3 +1,2 @@
-source 'http://rubygems.org'
-
-gem 'github-pages'
+source "https://rubygems.org"
+gemspec

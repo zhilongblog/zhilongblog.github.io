@@ -1,32 +1,17 @@
-# Scribble
+# _Airspace_ for Jekyll
+![screenshot](screenshots/home.png "Description goes here")
 
-A Jekyll theme. [Demo :point_left:](http://scribble.muan.co/posts/scribble-the-jekyll-theme).
+This Jekyll theme is a port of ThemeFisher's Airspace template. It is released under ThemeFisher's free license, which requires attribution.
 
-![screenshot](https://cloud.githubusercontent.com/assets/1153134/23830104/6d4665e0-06b7-11e7-8805-57e73c346459.png)
+## Usage
+To start your project, [fork this respository](https://github.com/luminousrubyist/airspace-jekyll/fork), put in your content, and go!
 
-## Get started
-
-1. [Fork the repository](https://github.com/muan/scribble/fork)
-
-2. Clone the repository: `git clone https://github.com/username/scribble`
-
-3. Run `bundle install`
-
-4. Run Jekyll: `bundle exec jekyll serve -w`
-
-5. Go to http://localhost:4000 for your site.
-
----
-
-## Make it yours
-
-1. Edit `_config.yml`, adn then rerun `jekyll serve -w`
-
-2. Change `about.md` for blog intro
-
-3. For domain settings see [the guide from GitHub](https://help.github.com/articles/setting-up-a-custom-domain-with-pages)
-
-## The end
-
-Like it? [Tell me](http://twitter.com/muanchiou).<br/>
-Problem? [Use GitHub Issues](https://github.com/muan/scribble).
+## Examples
+Here are some projects that have used this Jekyll Theme:
+* [BOYUAN Open Source 博辕开源](https://boyuanitsm.github.io)
+* [Campus VC](https://mrchildneo.github.io/mrchildneo/)
+* [Mãos de amar](https://www.maosdeamar.com.br/)
+* [ATK Team](http://www.atksec.com/)
+* [Coding Club](https://ourcodingclub.github.io/)
+* [Dev Empathy Book Club](http://www.devempathybook.club/)
+* [DKAN Open Data Catalog](http://getdkan.com) (modified version of this theme)
