@@ -1,37 +1,36 @@
-
-exclude:
-  - "/vendor/"
-  - "Gemfile"
-  - "Gemfile.lock"
-  - "README.md"
-  - "LICENSE.md"
-  - "*.gemspec"
-
-keep_files:
-  - "CNAME"
-  - ".git"
-  - ".gitignore"
-
-
 # Site settings
-title: Airspace
-subtitle: "A free HTML5 agency template"
-url: "https://luminousrubyist.github.io/" # the base hostname & protocol for your site
-# baseurl: "/the/subpath/of/your/site" # Set this value to "" if you want your site to be root
-baseurl: "/airspace-jekyll"
-cover: "/assets/cover.png"
-logo: "/assets/logo.png"
+title: Thomas Zühlke
+description: 'Business Card Page'
+url: 'http://thomas.zuehlke.family'
+baseurl: ''
+profilepic: '/images/tzuehlke.jpg'
+bkimage: '/images/bk1.jpg'
+google_analytics: UA-XXXXXX-X
+font_awesome: 'XXXXXXXXXX.js'
+
+author:
+  name: 'Thomas Zühlke'
+  email: info@thomas-zuehlke.de
+  twitter_username: thomzuehlke
+#  facebook_username: joshgerdes
+  github_username:  tzuehlke
+  linkedin_username:  thomas-zühlke-889182165
+  meetup_name: Azure-Meetup-Rostock-MV
 
 # Build settings
+destination: _site
 markdown: kramdown
+highlighter: rouge
 
-# Google analytics
-# ga_tracking_id: "UA-XXXX-1"
+sass:
+    sass_dir: _sass
+    style: compressed
 
-# Category descriptions (for archive pages)
-descriptions:
-  - cat: jekyll
-    desc: "Posts describing Jekyll setup techniques."
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
 
-  - cat: dummy
-    desc: "Just some placeholder posts, lorem ipsum and the rest."
+#plugins: ['jekyll-paginate']
+exclude: ['README.md', 'screenshot-overview.png']

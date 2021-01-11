@@ -1,53 +1,48 @@
-$(document).ready(function(){
+---
+layout: null
+sitemap:
+  exclude: 'yes'
+---
 
+$(document).ready(function () {
+  $('a.panel-button').click(function (e) {
+    //if ($('.panel-cover').hasClass('panel-cover--collapsed')) return
+    if ($('.content-wrapper').hasClass('showing')){
+      $('.content-wrapper').removeClass('animated slideInRight')
+      $('.panel-cover').removeClass('panel-cover--collapsed')
+      $('.panel-cover').css('max-width', '100%')
+      $('.panel-cover').animate({'width': '100%'}, 400, swing = 'swing', function () {})
+      $('.content-wrapper').removeClass('showing')
+      window.location.hash = '';
+      parent.location.hash = ''
+      return;
+    }
+    currentWidth = $('.panel-cover').width()
+    if (currentWidth < 960) {
+      $('.panel-cover').addClass('panel-cover--collapsed')
+      $('.content-wrapper').addClass('animated slideInRight')
+    } else {
+      $('.panel-cover').css('max-width', currentWidth)
+      $('.panel-cover').animate({'max-width': '530px', 'width': '40%'}, 400, swing = 'swing', function () {})
+    }
+    $('.content-wrapper').addClass('showing');
+  })
 
-	$("#portfolio-contant-active").mixItUp();
+  if (window.location.hash && window.location.hash == '#projects') {
+    $('.panel-cover').addClass('panel-cover--collapsed')
+  }
 
+  if (window.location.pathname !== '{{ site.baseurl }}/' && window.location.pathname !== '{{ site.baseurl }}/index.html') {
+    $('.panel-cover').addClass('panel-cover--collapsed')
+  }
 
-	$("#testimonial-slider").owlCarousel({
-	    paginationSpeed : 500,      
-	    singleItem:true,
-	    autoPlay: 3000,
-	});
+  $('.btn-mobile-menu').click(function () {
+    $('.navigation-wrapper').toggleClass('visible animated bounceInDown')
+    $('.btn-mobile-menu__icon').toggleClass('icon-list icon-x-circle animated fadeIn')
+  })
 
-
-
-
-	$("#clients-logo").owlCarousel({
-		autoPlay: 3000,
-		items : 5,
-		itemsDesktop : [1199,5],
-		itemsDesktopSmall : [979,5],
-	});
-
-	$("#works-logo").owlCarousel({
-		autoPlay: 3000,
-		items : 5,
-		itemsDesktop : [1199,5],
-		itemsDesktopSmall : [979,5],
-	});
-
-
-	// google map
-		var map;
-		function initMap() {
-		  map = new google.maps.Map(document.getElementById('map'), {
-		    center: {lat: -34.397, lng: 150.644},
-		    zoom: 8
-		  });
-		}
-
-
-	// Counter
-
-	$('.counter').counterUp({
-        delay: 10,
-        time: 1000
-    });
-
-
-});
-
-
-
-
+  $('.navigation-wrapper .projects-button').click(function () {
+    $('.navigation-wrapper').toggleClass('visible')
+    $('.btn-mobile-menu__icon').toggleClass('icon-list icon-x-circle animated fadeIn')
+  })
+})
